@@ -1,0 +1,29 @@
+#blocPage {
+    width: 990px;
+    margin: auto;
+}
+
+
+#MainMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    
+}
+nav a {
+    margin-right: 15px;
+}
+
+#filtres, #filtres ul {
+    display: flex;
+    list-style-type: none;
+    align-items: baseline;
+    
+}
+#filtres ul a {
+    margin-right: 15px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/daa7ee3df5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="blocPage">
+            <header>
+                <div id="MainMenu">
+                    <h1><img src="images/logo/Reservia@3x.png" alt="Logo"></h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#hebergements">Hébergements</a></li>
+                            <li><a href="#activites">Activités</a></li>
+                            <li><a href="#inscription">S'inscrire</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="recherche">
+                    <h2>Trouvez votre hébergement pour des vacances de rêve!</h2>
+                    <p>En plein centre ville ou en pleine nature</p>
+                    <form method ="post" action="traitement.php">
+                        <p>
+                            <label for="champ_recherche"><i class="fas fa-map-marker-alt"></i></label> : <input type="text" name="champ_recherche" id="champ_recherche" placeholder="Marseilles, France"> <input type="submit" value="Rechercher">
+                        </p>
+                    </form>
+                </div>
+                <div id="filtres">
+                    <h3>Filtres</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-money-bill-wave-alt"></i>Economique</a></li>
+                        <li><a href="#"><i class="fas fa-child"></i>Familial</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i>Romantique</a></li>
+                        <li><a href="#"><i class="fas fa-dog"></i>Animaux autorisés</a></li>
+                    </ul>
+                </div>
+                <p>i Plus de 500 logements sont disponibles dans cette ville!</p>
+            </header>
+
+        </div>
+    </body>
+</html>

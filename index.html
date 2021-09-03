@@ -27,27 +27,30 @@
             <a href="#hebergements" class="menu_nav">Hébergements</a>
             <a href="#activites" class="menu_nav">Activités</a>
             <p>
-              <a href="#inscription"><strong>S'inscrire</strong></a>
+              <a href="#inscription">S'inscrire</a>
             </p>
           </nav>
         </div>
         <!--Champ de recherche-->
         <div id="recherche">
-          <h2>Trouvez votre hébergement pour des vacances de rêve!</h2>
-          <p>En plein centre ville ou en pleine nature</p>
-          <form method="post" action="traitement.php">
-            <p>
-              <label for="champ_recherche"
-                ><i class="fas fa-map-marker-alt"></i
-              ></label>
-              :
+          <div id="recherche_titre">
+            <h2>Trouvez votre hébergement pour des vacances de rêve!</h2>
+            <p>En plein centre ville ou en pleine nature</p>
+          </div>
+          <form method="post" action="traitement.php" id="form_recherche">
+            <p class="cont_icone">
+              <i class="fas fa-map-marker-alt map_icone"></i>
+            </p>
+            <p class="input_recherche">
               <input
                 type="text"
                 name="champ_recherche"
                 id="champ_recherche"
-                placeholder="Marseilles, France"
+                value="Marseilles, France"
               />
-              <input type="submit" value="Rechercher" />
+            </p>
+            <p class="bouton_recherche">
+              <input type="submit" value="Rechercher" id="bouton_recherche" />
             </p>
           </form>
         </div>
@@ -55,23 +58,26 @@
         <div id="filtres">
           <h3>Filtres</h3>
           <ul>
-            <li>
+            <li class="filtres">
               <a href="#"
                 ><i class="fas fa-money-bill-wave-alt"></i>Economique</a
               >
             </li>
-            <li>
+            <li class="filtres">
               <a href="#"><i class="fas fa-child"></i>Familial</a>
             </li>
-            <li>
+            <li class="filtres">
               <a href="#"><i class="fas fa-heart"></i>Romantique</a>
             </li>
-            <li>
+            <li class="filtres">
               <a href="#"><i class="fas fa-dog"></i>Animaux autorisés</a>
             </li>
           </ul>
         </div>
-        <p>i Plus de 500 logements sont disponibles dans cette ville!</p>
+        <p>
+          <i class="fas fa-info"></i> Plus de 500 logements sont disponibles
+          dans cette ville!
+        </p>
       </header>
       <!--Début du contenu principal-->
       <main>

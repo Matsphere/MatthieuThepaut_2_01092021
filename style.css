@@ -5,7 +5,7 @@
   --main-police: "Raleway";
 }
 
-body {
+* {
   font-family: var(--main-police);
 }
 
@@ -27,6 +27,10 @@ nav {
   align-items: center;
   height: 100%;
 }
+nav p a {
+  color: var(--main-blue-color);
+  font-weight: bold;
+}
 nav a {
   padding-left: 20px;
 }
@@ -46,25 +50,106 @@ a {
   color: var(--main-blue-color);
   border-top-color: var(--main-blue-color);
   border-top-style: solid;
-  border-top-width: 5px;
+  border-top-width: 2px;
 }
 .menu_nav:active {
   color: var(--main-blue-color);
   border-top-color: var(--main-blue-color);
   border-top-style: solid;
-  border-top-width: 5px;
+  border-top-width: 2px;
 }
 
+#recherche_titre p {
+  margin: 0px;
+}
+#recherche_titre h2 {
+  margin-bottom: 5px;
+}
+.cont_icone {
+  background-color: var(--main-grey-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.map_icone {
+  margin: 15px 0px 15px 15px;
+}
+
+input[type="submit"] {
+  text-decoration: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#form_recherche {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#form_recherche p {
+  height: 100%;
+}
+#champ_recherche {
+  height: 42px;
+  border-width: 1px;
+  border-color: var(--main-grey-color);
+  border-style: solid;
+  padding-left: 15px;
+  font-family: var(--main-police);
+  font-weight: bold;
+}
+#champ_recherche:focus-visible {
+  outline: none;
+}
+#bouton_recherche {
+  background-color: var(--main-blue-color);
+  color: white;
+  border: 0px;
+  padding: 15px;
+  font-family: var(--main-police);
+  font-weight: bold;
+}
 #filtres,
 #filtres ul {
   display: flex;
   list-style-type: none;
   align-items: baseline;
+  padding-inline-start: 0px;
 }
-#filtres ul a {
+#filtres ul li {
   margin-right: 15px;
 }
+#filtres a {
+  color: black;
+}
+#filtres i {
+  position: absolute;
+  left: -3px;
+  bottom: -3px;
+  color: var(--main-blue-color);
+  border: 1px solid var(--main-grey-color);
+  border-radius: 50%;
+  background-color: var(--main-lightblue-color);
+  padding: 18px;
+  margin: 0px;
+}
+#filtres h3 {
+  margin-right: 30px;
+}
+.filtres {
+  position: relative;
+  border: 2px solid var(--main-grey-color);
+  border-radius: 30px;
+  padding: 15px 15px 15px 65px;
 
+  overflow: visible;
+}
+
+.fa-info {
+  border: 2px solid var(--main-grey-color);
+  color: var(--main-blue-color);
+  border-radius: 50%;
+  padding: 5px 10px 5px 10px;
+  margin-right: 10px;
+}
 #section_hebergements {
   display: flex;
 }
@@ -127,7 +212,7 @@ a {
   padding: 0px;
 }
 
-.fas {
+.fa-star {
   margin-right: 15px;
 }
 

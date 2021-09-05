@@ -153,17 +153,22 @@ input[type="submit"] {
 #section_hebergements {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 #hebergements {
-  height: 500px;
+  height: 550px;
   width: 660px;
   background-color: var(--main-grey-color);
   border-radius: 15px;
   padding: 30px;
 }
-
+#populaires {
+  background-color: var(--main-grey-color);
+  border-radius: 15px;
+  padding: 30px;
+}
 .resultats_hebergements {
   display: flex;
   flex-direction: row;
@@ -172,13 +177,13 @@ input[type="submit"] {
   align-content: space-between;
 }
 
-.image_resultat {
+.image_resultat_hebergements {
   width: 100%;
   height: 90px;
   object-fit: cover;
   object-position: center;
 }
-.figure_resultat {
+.figure_resultat_hebergements {
   margin: 0px;
   height: 100%;
   width: 100%;
@@ -188,10 +193,10 @@ input[type="submit"] {
 .resultats_populaires {
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  justify-content: space-between;
 }
 
-.resultats {
+.resultat_hebergements {
   height: 155px;
   width: 190px;
   border-radius: 10px;
@@ -200,18 +205,18 @@ input[type="submit"] {
   background-color: white;
   margin-bottom: 15px;
 }
-.description {
+.description_hebergements {
   height: 70px;
   width: 100%;
   font-size: 0.8em;
   align-self: flex-end;
   padding: 5px;
 }
-.description p,
-.description h4 {
+.description_hebergements p,
+.description_hebergements h4 {
   margin: 0px 0px 5px 0px;
 }
-.description ul {
+.description_hebergements ul {
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
@@ -231,6 +236,52 @@ input[type="submit"] {
   align-items: baseline;
 }
 
+.resultat_populaires {
+  height: 140px;
+  width: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+.image_resultat_populaires {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.figure_resultat_populaires {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.description_populaires {
+  height: 100%;
+  width: 100%;
+  font-size: 0.8em;
+  padding-left: 20px;
+}
+.description_populaires h4 {
+  margin: 20px 0px 5px 0px;
+}
+.description_populaires p {
+  margin: 5px 0px 60px 0px;
+}
+.description_populaires ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
 #activites {
   height: 500px;
   width: 300px;

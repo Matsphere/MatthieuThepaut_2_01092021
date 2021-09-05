@@ -152,21 +152,38 @@ input[type="submit"] {
 }
 #section_hebergements {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hebergements {
-  position: relative;
-
+#hebergements {
   height: 500px;
-  width: 50%;
+  width: 660px;
   background-color: var(--main-grey-color);
-  border-radius: 5px;
+  border-radius: 15px;
+  padding: 30px;
 }
+
 .resultats_hebergements {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-around;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.image_resultat {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+}
+.figure_resultat {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .resultats_populaires {
   display: flex;
@@ -175,47 +192,39 @@ input[type="submit"] {
 }
 
 .resultats {
+  height: 155px;
+  width: 190px;
+  border-radius: 10px;
+  padding: 5px;
   position: relative;
-
-  height: 75px;
-  width: 130px;
-  margin: 15px;
-  border-radius: 5px;
-}
-.resultats img {
-  width: 100%;
-  height: 150px;
-  text-align: center;
-}
-.resultats h3 {
-  font-size: 1em;
-  padding: 0px;
-}
-.resultats p {
-  font-size: 0.8em;
-  padding: 0px;
+  background-color: white;
+  margin-bottom: 15px;
 }
 .description {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background-color: white;
+  height: 70px;
   width: 100%;
-  align-items: baseline;
+  font-size: 0.8em;
+  align-self: flex-end;
+  padding: 5px;
+}
+.description p,
+.description h4 {
+  margin: 0px 0px 5px 0px;
 }
 .description ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   list-style-type: none;
-  bottom: 8px;
-  left: 16px;
+  margin: 0px;
   padding: 0px;
 }
 
 .fa-star {
-  margin-right: 15px;
+  color: var(--main-blue-color);
 }
-
+.star-empty {
+  color: var(--main-grey-color);
+}
 #pop_titre {
   display: flex;
   justify-content: space-between;
@@ -223,10 +232,8 @@ input[type="submit"] {
 }
 
 #activites {
-  position: relative;
-
   height: 500px;
-  width: 100%;
+  width: 300px;
   border-radius: 5px;
 }
 .resultats_activites {

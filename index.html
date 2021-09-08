@@ -1,80 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap
+      "
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/daa7ee3df5.js"
       crossorigin="anonymous"
     ></script>
+    <title>Reservia</title>
   </head>
   <body>
     <!--Bloc header + Main-->
-    <div id="blocPage">
+    <div class="bloc_page">
       <!--Bloc Header-->
       <header>
         <!--Menu principal Logo et navigation-->
-        <div id="MainMenu">
-          <div id="logo">
+        <div class="menu">
+          <div class="Logo_reservia">
             <img src="images/logo/Reservia.svg" alt="Logo" />
           </div>
-
-          <nav>
-            <a href="#hebergements" class="menu_nav">Hébergements</a>
-            <a href="#activites" class="menu_nav">Activités</a>
-            <p>
-              <a href="#inscription">S'inscrire</a>
-            </p>
-          </nav>
+          <div class="menu_liens">
+            <nav>
+              <a href="#hebergements" class="menu_nav">Hébergements</a>
+              <a href="#activites" class="menu_nav">Activités</a>
+            </nav>
+            <a href="#inscription" class="lien_inscription">S'inscrire</a>
+          </div>
         </div>
         <!--Champ de recherche-->
         <div id="recherche">
-          <div id="recherche_titre">
-            <h2>Trouvez votre hébergement pour des vacances de rêve!</h2>
+          <div class="recherche_titre">
+            <h1>Trouvez votre hébergement pour des vacances de rêve!</h1>
             <p>En plein centre ville ou en pleine nature</p>
           </div>
-          <form method="post" action="traitement.php" id="form_recherche">
+          <form method="post" action="#" id="form_recherche">
             <p class="cont_icone">
               <i class="fas fa-map-marker-alt map_icone"></i>
             </p>
-            <p class="input_recherche">
-              <input
-                type="text"
-                name="champ_recherche"
-                id="champ_recherche"
-                value="Marseilles, France"
-              />
-            </p>
-            <p class="bouton_recherche">
-              <input type="submit" value="Rechercher" id="bouton_recherche" />
-            </p>
+            <input
+              type="text"
+              name="champ_recherche"
+              id="champ_recherche"
+              placeholder="Marseille France"
+              required=""
+              class="input_recherche"
+            />
+            <button type="submit" class="bouton_recherche">Rechercher</button>
           </form>
         </div>
         <!--Filtres-->
         <div id="filtres">
-          <h3>Filtres</h3>
-          <ul>
-            <li class="filtres">
-              <a href="#"
-                ><i class="fas fa-money-bill-wave-alt"></i>Economique</a
+          <h2>Filtres</h2>
+          <div class="filtres_liste">
+            <a href="#" class="filtres"
+                ><i class="fas fa-money-bill-wave-alt filtres_icone"></i>Economique</a
               >
-            </li>
-            <li class="filtres">
-              <a href="#"><i class="fas fa-child"></i>Familial</a>
-            </li>
-            <li class="filtres">
-              <a href="#"><i class="fas fa-heart"></i>Romantique</a>
-            </li>
-            <li class="filtres">
-              <a href="#"><i class="fas fa-dog"></i>Animaux autorisés</a>
-            </li>
-          </ul>
+            <a href="#" class="filtres"><i class="fas fa-child filtres_icone"></i>Familial</a>
+            <a href="#" class="filtres"><i class="fas fa-heart filtres_icone"></i>Romantique</a>
+            <a href="#" class="filtres"><i class="fas fa-dog filtres_icone"></i>Animaux autorisés</a>
+          </div>
         </div>
-        <p>
+        <p class="filtres_info">
           <i class="fas fa-info"></i> Plus de 500 logements sont disponibles
           dans cette ville!
         </p>
@@ -82,13 +74,13 @@
       <!--Début du contenu principal-->
       <main>
         <!--Section hébergements-->
-        <section id="section_hebergements">
+        <div id="section_hebergements">
           <!--Bloc hébergements-->
-          <article id="hebergements" class="hebergements">
-            <h3>Hébergements à Marseilles</h3>
+          <section id="hebergements" class="hebergements">
+            <h2>Hébergements à Marseilles</h2>
             <!--Bloc résultats-->
             <div class="resultats_hebergements">
-              <div class="resultat_hebergements">
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
@@ -107,8 +99,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_hebergements">
+              </article>
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
@@ -127,8 +119,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_hebergements">
+              </article>
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
@@ -147,8 +139,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_hebergements">
+              </article>
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
@@ -167,8 +159,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_hebergements">
+              </article>
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
@@ -187,8 +179,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_hebergements">
+              </article>
+              <article class="resultat_hebergements">
                 <figure class="figure_resultat_hebergements">
                   <img
                     src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
@@ -207,13 +199,13 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
+              </article>
             </div>
             <p><strong>Afficher plus</strong></p>
-          </article>
+          </section>
 
           <!--Bloc populaires-->
-          <article id="populaires" class="hebergements">
+          <section id="populaires" class="hebergements">
             <!--Bloc titre populaires-->
             <div id="pop_titre">
               <h3>Les plus populaires</h3>
@@ -221,7 +213,7 @@
             </div>
             <!--Bloc résultats populaires-->
             <div class="resultats_populaires">
-              <div class="resultat_populaires">
+              <article class="resultat_populaires">
                 <figure class="figure_resultat_populaires">
                   <img
                     src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
@@ -240,8 +232,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_populaires">
+              </article>
+              <article class="resultat_populaires">
                 <figure class="figure_resultat_populaires">
                   <img
                     src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
@@ -260,8 +252,8 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
-              <div class="resultat_populaires">
+              </article>
+              <article class="resultat_populaires">
                 <figure class="figure_resultat_populaires">
                   <img
                     src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
@@ -280,15 +272,15 @@
                     </ul>
                   </figcaption>
                 </figure>
-              </div>
+              </article>
             </div>
-          </article>
-        </section>
+          </section>
+        </div>
         <!--Section activités-->
         <section id="section_activites">
           <h3>Activités à Marseilles</h3>
           <div class="resultats_activites">
-            <div class="resultat_activites_1 resultat_activites">
+            <article class="resultat_activites_1 resultat_activites">
               <figure
                 class="figure_resultat_activites_1 figure_resultat_activites"
               >
@@ -303,8 +295,8 @@
                   <h4>Vieux Port</h4>
                 </figcaption>
               </figure>
-            </div>
-            <div class="resultat_activites_2 resultat_activites">
+            </article>
+            <article class="resultat_activites_2 resultat_activites">
               <figure
                 class="figure_resultat_activites_2 figure_resultat_activites"
               >
@@ -319,8 +311,8 @@
                   <h4>Fort de Pomègues</h4>
                 </figcaption>
               </figure>
-            </div>
-            <div class="resultat_activites_3 resultat_activites">
+            </article>
+            <article class="resultat_activites_3 resultat_activites">
               <figure
                 class="figure_resultat_activites_3 figure_resultat_activites"
               >
@@ -335,8 +327,8 @@
                   <h4>Îles du Frioul</h4>
                 </figcaption>
               </figure>
-            </div>
-            <div class="resultat_activites_4 resultat_activites">
+            </article>
+            <article class="resultat_activites_4 resultat_activites">
               <figure
                 class="figure_resultat_activites_4 figure_resultat_activites"
               >
@@ -351,8 +343,8 @@
                   <h4>Parc National des Calanques</h4>
                 </figcaption>
               </figure>
-            </div>
-            <div class="resultat_activites_5 resultat_activites">
+            </article>
+            <article class="resultat_activites_5 resultat_activites">
               <figure
                 class="figure_resultat_activites_5 figure_resultat_activites"
               >
@@ -367,8 +359,8 @@
                   <h4>Notre-Dame-de-la-Garde</h4>
                 </figcaption>
               </figure>
-            </div>
-            <div class="resultat_activites_6 resultat_activites">
+            </article>
+            <article class="resultat_activites_6 resultat_activites">
               <figure
                 class="figure_resultat_activites_6 figure_resultat_activites"
               >
@@ -383,7 +375,7 @@
                   <h4>Parc Longchamp</h4>
                 </figcaption>
               </figure>
-            </div>
+            </article>
           </div>
         </section>
       </main>

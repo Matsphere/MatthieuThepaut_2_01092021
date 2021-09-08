@@ -2,7 +2,7 @@
   --main-blue-color: #0065fc;
   --main-lightblue-color: #deebff;
   --main-grey-color: #f2f2f2;
-  --main-police: "Raleway";
+  --main-police: "Raleway", "Arial", "Impact";
 }
 /* Definition de la police sur tous les élements*/
 
@@ -10,44 +10,52 @@
   font-family: var(--main-police);
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Definition de la largeur du bloc page contenant le header et le main */
-#blocPage {
-  width: 1100px;
+.bloc_page {
+  width: 90%
   margin: auto;
 }
 
 /*Style Header*/
 
-#MainMenu {
+.menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100px;
 }
 
+.menu_liens {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-nav p a {
+
+
+.lien_inscription {
+  padding-left: 20px;
   color: var(--main-blue-color);
   font-weight: bold;
 }
-nav a {
-  padding-left: 20px;
-}
-a {
-  text-decoration: none;
-}
+
 
 .menu_nav {
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
   color: black;
-  padding-right: 20px;
+  padding: 0px 20px;
 }
 
 .menu_nav:hover {
@@ -56,42 +64,42 @@ a {
   border-top-style: solid;
   border-top-width: 2px;
 }
-.menu_nav:active {
-  color: var(--main-blue-color);
-  border-top-color: var(--main-blue-color);
-  border-top-style: solid;
-  border-top-width: 2px;
-}
 
-#recherche_titre p {
+.recherche_titre p {
   margin: 0px;
 }
-#recherche_titre h2 {
-  margin-bottom: 5px;
+.recherche_titre h1 {
+  margin:0px 0px 5px 0px;
+  font-size: 1.8em;
 }
 .cont_icone {
   background-color: var(--main-grey-color);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+ 
 }
 .map_icone {
   margin: 15px 15px 15px 15px;
+  
 }
 
-input[type="submit"] {
+.bouton_recherche {
   text-decoration: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background-color: var(--main-blue-color);
+  color: white;
+  border: 0px;
+  padding: 15px;
+  font-weight: bold;
 }
 #form_recherche {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-#form_recherche p {
-  height: 100%;
-}
-#champ_recherche {
+
+.input_recherche {
   height: 42px;
   border-width: 1px;
   border-color: var(--main-grey-color);
@@ -100,32 +108,26 @@ input[type="submit"] {
   font-family: var(--main-police);
   font-weight: bold;
 }
-#champ_recherche:focus-visible {
+.input_recherche:focus-visible {
   outline: none;
 }
-#bouton_recherche {
-  background-color: var(--main-blue-color);
-  color: white;
-  border: 0px;
-  padding: 15px;
-  font-family: var(--main-police);
-  font-weight: bold;
+#filtres {
+  margin: 15px 0px;
 }
+.filtres_info {
+  margin-bottom: 30px;
+}
+
 #filtres,
-#filtres ul {
+.filtres_liste {
   display: flex;
-  list-style-type: none;
-  align-items: baseline;
-  padding-inline-start: 0px;
-}
-#filtres ul li {
-  margin-right: 15px;
-}
-#filtres a {
-  color: black;
-  font-weight: bold;
-}
-#filtres i {
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+
+
+.filtres_icone{
   position: absolute;
   left: -3px;
   bottom: -3px;
@@ -136,7 +138,7 @@ input[type="submit"] {
   padding: 18px;
   margin: 0px;
 }
-#filtres h3 {
+#filtres h2 {
   margin-right: 30px;
 }
 .filtres {
@@ -144,7 +146,9 @@ input[type="submit"] {
   border: 2px solid var(--main-grey-color);
   border-radius: 30px;
   padding: 15px 15px 15px 65px;
-
+  margin: 0px 15px;
+  color: black;
+  font-weight: bold;
   overflow: visible;
 }
 

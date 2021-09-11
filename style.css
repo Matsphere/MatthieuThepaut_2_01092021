@@ -16,7 +16,7 @@ a {
 
 /*Definition de la largeur du bloc page contenant le header et le main */
 .bloc_page {
-  width: 90%
+  width: 95%;
   margin: auto;
 }
 
@@ -24,31 +24,26 @@ a {
 
 .menu {
   display: flex;
+
   align-items: center;
   height: 100px;
 }
 
-.menu_liens {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  flex: 1;
+.logo_reservia {
+  width: 100%;
 }
 
 nav {
   display: flex;
-  align-items: center;
   height: 100%;
 }
 
-
 .lien_inscription {
+  align-items: flex-end;
   padding-left: 20px;
   color: var(--main-blue-color);
   font-weight: bold;
 }
-
 
 .menu_nav {
   display: flex;
@@ -69,18 +64,16 @@ nav {
   margin: 0px;
 }
 .recherche_titre h1 {
-  margin:0px 0px 5px 0px;
+  margin: 0px 0px 5px 0px;
   font-size: 1.8em;
 }
 .cont_icone {
   background-color: var(--main-grey-color);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
- 
 }
 .map_icone {
   margin: 15px 15px 15px 15px;
-  
 }
 
 .bouton_recherche {
@@ -124,32 +117,36 @@ nav {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  }
+}
 
-
-.filtres_icone{
+.filtres_icone {
   position: absolute;
   left: -3px;
   bottom: -3px;
   color: var(--main-blue-color);
-  border: 1px solid var(--main-grey-color);
+  border: 1px solid var(--main-lightblue-color);
   border-radius: 50%;
   background-color: var(--main-lightblue-color);
   padding: 18px;
   margin: 0px;
 }
 #filtres h2 {
-  margin-right: 30px;
+  margin-right: 45px;
 }
 .filtres {
   position: relative;
   border: 2px solid var(--main-grey-color);
   border-radius: 30px;
   padding: 15px 15px 15px 65px;
-  margin: 0px 15px;
+  margin: 7px 15px 15px 0px;
   color: black;
   font-weight: bold;
   overflow: visible;
+}
+
+.filtres:hover {
+  color: var(--main-blue-color);
+  background-color: var(--main-lightblue-color);
 }
 
 .fa-info {
@@ -167,12 +164,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
-#hebergements {
-  height: 550px;
-  width: 660px;
+.hebergements {
+  width: 60%;
   background-color: var(--main-grey-color);
   border-radius: 15px;
   padding: 30px;
@@ -188,7 +184,7 @@ nav {
 
 .image_resultat_hebergements {
   width: 100%;
-  height: 90px;
+  height: 100px;
   object-fit: cover;
   object-position: center;
 }
@@ -201,8 +197,9 @@ nav {
 }
 
 .resultat_hebergements {
-  height: 155px;
-  width: 190px;
+  height: 170px;
+  width: 30%;
+  min-width: 190px;
   border-radius: 10px;
   padding: 5px;
   position: relative;
@@ -210,14 +207,22 @@ nav {
   margin-bottom: 15px;
 }
 .description_hebergements {
-  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 50px;
   width: 100%;
   font-size: 0.8em;
   align-self: flex-end;
   padding: 5px;
 }
+
+.description_texte {
+  font-size: 0.8em;
+  color: black;
+}
 .description_hebergements p,
-.description_hebergements h4 {
+.description_hebergements h2 {
   margin: 0px 0px 5px 0px;
 }
 .description_hebergements ul {
@@ -238,10 +243,11 @@ nav {
 
 /*Section Populaires*/
 
-#populaires {
+.populaires {
   background-color: var(--main-grey-color);
   border-radius: 15px;
   padding: 30px;
+  width: 30%;
 }
 
 #pop_titre {
@@ -254,11 +260,12 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .resultat_populaires {
   height: 140px;
-  width: 300px;
+  width: 90%;
   border-radius: 10px;
   padding: 5px;
   position: relative;
@@ -268,10 +275,17 @@ nav {
 
 .image_resultat_populaires {
   width: 120px;
-  height: 100%;
+  height: 140px;
   object-fit: cover;
   object-position: center;
 }
+
+.image_resultat_populaires_3 {
+  width: 120px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .figure_resultat_populaires {
   display: flex;
   justify-content: space-between;
@@ -284,16 +298,19 @@ nav {
   position: relative;
 }
 .description_populaires {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   font-size: 0.8em;
   padding-left: 20px;
 }
-.description_populaires h4 {
+.description_populaires h2 {
   margin: 20px 0px 5px 0px;
 }
 .description_populaires p {
-  margin: 5px 0px 50px 0px;
+  margin: 5px 0px 0px 0px;
 }
 .description_populaires ul {
   display: flex;
@@ -319,7 +336,8 @@ nav {
 }
 
 .resultat_activites {
-  width: 260px;
+  width: 23%;
+  min-width: 260px;
   border-radius: 10px;
   background-color: white;
   border: 1px solid var(--main-grey-color);
@@ -341,9 +359,10 @@ nav {
 }
 .description_activites {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.5em;
+  color: black;
 }
-.description_activites h4 {
+.description_activites h2 {
   margin-left: 15px;
 }
 
@@ -363,12 +382,12 @@ nav {
 /*activités 2*/
 
 .resultat_activites_2 {
-  height: 50%;
+  height: 52%;
 }
 
 .image_resultat_activites_2 {
   height: 80%;
-  object-position: 50% 35%;
+  object-position: 50% 45%;
 }
 
 .description_activites_2 {
@@ -377,19 +396,16 @@ nav {
 
 /*activités 3*/
 .resultat_activites_3 {
-  height: 40%;
+  height: 42%;
 }
 
 .image_resultat_activites_3 {
-  height: 70%;
-  object-position: 50% 0%;
+  height: 76%;
+  object-position: 50% 10%;
 }
 
 .description_activites_3 {
-  height: 30%;
-}
-.description_activites_3 h4 {
-  margin-left: 15px;
+  height: 24%;
 }
 
 /*activités 4*/
@@ -408,45 +424,43 @@ nav {
 
 /*activités 5*/
 .resultat_activites_5 {
-  height: 40%;
+  height: 42%;
 }
 
 .image_resultat_activites_5 {
-  height: 70%;
-  object-position: 50% 0%;
+  height: 76%;
+  object-position: 50% 20%;
 }
 
 .description_activites_5 {
-  height: 30%;
+  height: 24%;
 }
 
 /*activités 6 */
 
 .resultat_activites_6 {
-  height: 50%;
+  height: 52%;
 }
 
 .image_resultat_activites_6 {
   height: 80%;
-  object-position: 50% 0%;
+  object-position: 50% 15%;
 }
 
 .description_activites_6 {
   height: 20%;
 }
 
-#activites h3 {
+#activites h1 {
   margin: 15px 0px;
 }
 
 /*Style footer*/
 footer {
-  width: 1100px;
+  width: 100%;
   display: flex;
-  flex: 1;
-  align-items: flex-start;
   background-color: var(--main-grey-color);
-  margin: auto;
+  font-size: 0.8em;
 }
 
 footer div {
@@ -456,4 +470,46 @@ footer div {
 
 #a_propos {
   padding-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu_nav {
+    padding: 0px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo_reservia {
+    width: fit-content;
+    height: 50%;
+
+    order: 1;
+  }
+
+  nav {
+    order: 3;
+    height: 50%;
+    width: 100%;
+    border-bottom: 2px solid var(--main-grey-color);
+  }
+
+  .lien_inscription {
+    display: flex;
+    align-items: center;
+    order: 2;
+    height: 50%;
+  }
+
+  .menu_nav:hover {
+    color: var(--main-blue-color);
+    border-bottom-color: var(--main-blue-color);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-top: none;
+  }
 }

@@ -86,10 +86,28 @@ nav {
   padding: 15px;
   font-weight: bold;
 }
+.bouton_recherche_loupe {
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--main-blue-color);
+  color: white;
+  border: 0px;
+  padding: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 16px;
+  left: 190px;
+  display: none;
+}
+.fa-search {
+  font-size: 1.3em;
+}
+
 #form_recherche {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .input_recherche {
@@ -511,5 +529,12 @@ footer div {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-top: none;
+  }
+
+  .bouton_recherche {
+    display: none;
+  }
+  .bouton_recherche_loupe {
+    display: block;
   }
 }

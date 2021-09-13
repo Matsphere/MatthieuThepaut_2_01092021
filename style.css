@@ -17,6 +17,7 @@ a {
 /*Definition de la largeur du bloc page contenant le header et le main */
 .bloc_page {
   width: 95%;
+  max-width: 2500px;
   margin: auto;
 }
 
@@ -140,13 +141,28 @@ nav {
 .filtres_icone {
   position: absolute;
   left: -3px;
-  bottom: -3px;
+  bottom: -1px;
   color: var(--main-blue-color);
   border: 1px solid var(--main-lightblue-color);
   border-radius: 50%;
   background-color: var(--main-lightblue-color);
-  padding: 18px;
+  padding: 16px;
   margin: 0px;
+}
+
+.fa-money-bill-wave {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.fa-child {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.fa-dog {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #filtres h2 {
   margin-right: 45px;
@@ -273,6 +289,9 @@ nav {
   justify-content: space-between;
   align-items: baseline;
 }
+.fa-chart-line {
+  font-size: 1.5em;
+}
 
 .resultats_populaires {
   display: flex;
@@ -350,12 +369,13 @@ nav {
   justify-content: space-between;
   align-content: space-between;
   position: relative;
-  height: 400px;
+  height: 500px;
 }
 
 .resultat_activites {
   width: 23%;
   min-width: 260px;
+  max-width: 500px;
   border-radius: 10px;
   background-color: white;
   border: 1px solid var(--main-grey-color);
@@ -389,8 +409,16 @@ nav {
   height: 100%;
 }
 .image_resultat_activites_1 {
+  height: 115%;
+  width: 172%;
+  object-position: 115% 0%;
+}
+
+.cont_image_resultat_1 {
   height: 90%;
-  object-position: 50% 0%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .description_activites_1 {
@@ -404,8 +432,15 @@ nav {
 }
 
 .image_resultat_activites_2 {
+  height: 100%;
+  width: 100%;
+  object-position: 50% 40%;
+}
+.cont_image_resultat_2 {
   height: 80%;
-  object-position: 50% 45%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .description_activites_2 {
@@ -418,8 +453,15 @@ nav {
 }
 
 .image_resultat_activites_3 {
+  height: 155%;
+  width: 100%;
+  object-position: 50% 0%;
+}
+.cont_image_resultat_3 {
   height: 76%;
-  object-position: 50% 10%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .description_activites_3 {
@@ -432,10 +474,16 @@ nav {
 }
 
 .image_resultat_activites_4 {
-  height: 90%;
-  object-position: 50% 0%;
+  height: 111%;
+  width: 166%;
+  object-position: 115% 0%;
 }
-
+.cont_image_resultat_4 {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
 .description_activites_4 {
   height: 10%;
 }
@@ -446,8 +494,15 @@ nav {
 }
 
 .image_resultat_activites_5 {
+  height: 100%;
+  width: 100%;
+  object-position: 50% 0%;
+}
+.cont_image_resultat_5 {
   height: 76%;
-  object-position: 50% 20%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .description_activites_5 {
@@ -461,8 +516,15 @@ nav {
 }
 
 .image_resultat_activites_6 {
+  height: 135%;
+  width: 100%;
+  object-position: 50% 0%;
+}
+.cont_image_resultat_6 {
   height: 80%;
-  object-position: 50% 15%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .description_activites_6 {
@@ -476,6 +538,7 @@ nav {
 /*Style footer*/
 footer {
   width: 100%;
+  max-width: 2777px;
   display: flex;
   background-color: var(--main-grey-color);
   font-size: 0.8em;
@@ -491,6 +554,10 @@ footer div {
 }
 
 @media only screen and (max-width: 768px) {
+  .bloc_page {
+    width: 100%;
+  }
+
   .menu_nav {
     padding: 0px;
     flex: 1;
@@ -536,5 +603,64 @@ footer div {
   }
   .bouton_recherche_loupe {
     display: block;
+  }
+
+  .populaires {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .hebergements {
+    width: 100%;
+    background-color: white;
+  }
+
+  .resultat_hebergements {
+    width: 95%;
+    border: 1px solid var(--main-grey-color);
+  }
+  .resultats_activites {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    position: relative;
+    height: 1500px;
+    width: 100%;
+  }
+  .resultat_activites {
+    width: 95%;
+    height: 15%;
+  }
+
+  .cont_images {
+    height: 80%;
+  }
+
+  .image_resultat_activites_1 {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 20%;
+  }
+
+  .image_resultat_activites_2 {
+    object-position: 50% 43%;
+  }
+
+  .image_resultat_activites_3 {
+    object-position: 50% 90%;
+  }
+
+  .image_resultat_activites_4 {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 10%;
+  }
+  .image_resultat_activites_5 {
+    object-position: 50% 25%;
+  }
+  .image_resultat_activites_6 {
+    object-position: 50% 50%;
   }
 }

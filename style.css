@@ -575,6 +575,9 @@ footer div {
   .hebergements {
     width: 45%;
   }
+  .populaires {
+    width: 40%;
+  }
 
   .resultat_hebergements {
     width: 45%;
@@ -706,12 +709,19 @@ footer div {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-between
     align-items: center;
     align-content: space-between;
     position: relative;
     height: 1500px;
     width: 100%;
+  }
+
+  .cont_activites_1 {
+    align-content: center;
+  }
+  .cont_activites_2 {
+    align-content: center;
   }
   .resultat_activites {
     width: 100%;
@@ -720,6 +730,10 @@ footer div {
 
   .cont_images {
     height: 80%;
+  }
+
+  .description_activites {
+    height: 20%;
   }
 
   .image_resultat_activites_1 {

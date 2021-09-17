@@ -67,7 +67,7 @@ nav {
 }
 .recherche_titre h1 {
   margin: 0px 0px 5px 0px;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 .cont_icone {
   background-color: var(--main-grey-color);
@@ -75,7 +75,7 @@ nav {
   border-bottom-left-radius: 10px;
 }
 .map_icone {
-  margin: 15px 15px 15px 15px;
+  margin: 18px 18px 18px 18px;
 }
 
 .bouton_recherche {
@@ -87,6 +87,7 @@ nav {
   border: 0px;
   padding: 15px;
   font-weight: bold;
+  font-size: 1.1em;
 }
 .bouton_recherche_loupe {
   text-decoration: none;
@@ -94,11 +95,11 @@ nav {
   background-color: var(--main-blue-color);
   color: white;
   border: 0px;
-  padding: 14px;
+  padding: 17px;
   font-weight: bold;
   position: absolute;
-  bottom: 16px;
-  left: 190px;
+  bottom: 18px;
+  left: 270px;
   display: none;
 }
 .fa-search {
@@ -110,16 +111,18 @@ nav {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  font-size: 1.1em;
 }
 
 .input_recherche {
-  height: 42px;
+  height: 49px;
   border-width: 1px;
   border-color: var(--main-grey-color);
   border-style: solid;
   padding-left: 15px;
   font-family: var(--main-police);
   font-weight: bold;
+  font-size: 1.1em;
 }
 .input_recherche:focus-visible {
   outline: none;
@@ -128,6 +131,9 @@ nav {
   margin: 15px 0px;
 }
 .filtres_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -167,12 +173,13 @@ nav {
 }
 #filtres h2 {
   margin-right: 45px;
+  font-size: 1.3em;
 }
 .filtres {
   position: relative;
   border: 2px solid var(--main-grey-color);
   border-radius: 30px;
-  padding: 15px 15px 15px 65px;
+  padding: 15px 15px 15px 55px;
   margin: 7px 15px 15px 0px;
   color: black;
   font-weight: bold;
@@ -188,8 +195,10 @@ nav {
   border: 2px solid var(--main-grey-color);
   color: var(--main-blue-color);
   border-radius: 50%;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 9px;
+  font-size: 0.8em;
   margin-right: 10px;
+ 
 }
 
 /* Syle Main */
@@ -203,7 +212,7 @@ nav {
 }
 
 .hebergements {
-  width: 65%;
+  width: 63%;
   background-color: var(--main-grey-color);
   border-radius: 15px;
   padding: 30px;
@@ -232,7 +241,7 @@ nav {
 }
 
 .resultat_hebergements {
-  height: 200px;
+  height: 210px;
   width: 30%;
   min-width: 190px;
   border-radius: 10px;
@@ -247,14 +256,14 @@ nav {
   flex-direction: column;
   height: 50px;
   width: 100%;
-  font-size: 0.8em;
-  align-self: flex-end;
   padding: 5px;
 }
 
 .description_texte {
-  font-size: 0.8em;
   color: black;
+}
+.description_texte h2 {
+  font-size: 1.2em;
 }
 .description_hebergements p,
 .description_hebergements h2 {
@@ -271,6 +280,7 @@ nav {
 /*Style Etoiles*/
 .fa-star {
   color: var(--main-blue-color);
+  font-size: 0.8em;
 }
 .star-empty {
   color: var(--main-grey-color);
@@ -282,7 +292,7 @@ nav {
   background-color: var(--main-grey-color);
   border-radius: 15px;
   padding: 30px;
-  width: 25%;
+  width: 26%;
 }
 
 #pop_titre {
@@ -313,14 +323,14 @@ nav {
 }
 
 .image_resultat_populaires {
-  width: 120px;
+  width: 140px;
   height: 140px;
   object-fit: cover;
   object-position: center;
 }
 
 .image_resultat_populaires_3 {
-  width: 120px;
+  width: 140px;
   object-fit: cover;
   object-position: center;
 }
@@ -342,7 +352,6 @@ nav {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  font-size: 0.8em;
   padding-left: 20px;
 }
 .description_populaires h2 {
@@ -416,7 +425,7 @@ nav {
 }
 .description_activites {
   width: 100%;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: black;
 }
 .description_activites h2 {
@@ -573,6 +582,7 @@ footer div {
 
 footer a {
   color: black;
+  font-size: 1.2em;
 }
 
 #a_propos {

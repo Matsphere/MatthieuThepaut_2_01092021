@@ -25,14 +25,13 @@ a {
 
 .menu {
   display: flex;
- 
 
   align-items: center;
   height: 100px;
 }
 
 .logo_reservia {
-  width: 100%;
+  flex: 1;
 }
 
 nav {
@@ -41,7 +40,6 @@ nav {
 }
 
 .lien_inscription {
-  align-items: flex-end;
   padding-left: 20px;
   color: var(--main-blue-color);
   font-weight: bold;
@@ -50,7 +48,7 @@ nav {
 .menu_nav {
   display: flex;
   align-items: center;
-  height: 100%;
+
   color: black;
   padding: 0px 20px;
 }
@@ -71,8 +69,8 @@ nav {
 }
 .cont_icone {
   background-color: var(--main-grey-color);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .map_icone {
   margin: 18px 18px 18px 18px;
@@ -80,8 +78,8 @@ nav {
 
 .bouton_recherche {
   text-decoration: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: var(--main-blue-color);
   color: white;
   border: 0px;
@@ -91,7 +89,7 @@ nav {
 }
 .bouton_recherche_loupe {
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: var(--main-blue-color);
   color: white;
   border: 0px;
@@ -99,7 +97,7 @@ nav {
   font-weight: bold;
   position: absolute;
   bottom: 18px;
-  left: 270px;
+  right: 0px;
   display: none;
 }
 .fa-search {
@@ -108,7 +106,7 @@ nav {
 
 #form_recherche {
   display: flex;
-  justify-content: flex-start;
+
   align-items: center;
   position: relative;
   font-size: 1.1em;
@@ -140,7 +138,6 @@ nav {
 #filtres,
 .filtres_liste {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -183,7 +180,6 @@ nav {
   margin: 7px 15px 15px 0px;
   color: black;
   font-weight: bold;
-  overflow: visible;
 }
 
 .filtres:hover {
@@ -198,7 +194,6 @@ nav {
   padding: 5px 9px;
   font-size: 0.8em;
   margin-right: 10px;
- 
 }
 
 /* Syle Main */
@@ -207,14 +202,13 @@ nav {
 .section_hebergements {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   flex-wrap: wrap-reverse;
 }
 
 .hebergements {
   width: 63%;
   background-color: var(--main-grey-color);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 30px;
 }
 
@@ -223,7 +217,6 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
 }
 
 .image_resultat_hebergements {
@@ -235,18 +228,17 @@ nav {
 .figure_resultat_hebergements {
   margin: 0px;
   height: 100%;
-  width: 100%;
-  border-radius: 10px;
+  flex: 1;
+  border-radius: 15px;
   overflow: hidden;
 }
 
 .resultat_hebergements {
   height: 210px;
   width: 30%;
-  min-width: 190px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 5px;
-  position: relative;
+
   background-color: white;
   margin-bottom: 15px;
 }
@@ -307,7 +299,6 @@ nav {
 .resultats_populaires {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -315,9 +306,8 @@ nav {
   height: 140px;
   width: 90%;
   min-width: 260px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 5px;
-  position: relative;
   background-color: white;
   margin-bottom: 15px;
 }
@@ -342,7 +332,7 @@ nav {
   margin: 0px;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
@@ -377,7 +367,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: relative;
   height: 500px;
 }
 
@@ -402,9 +391,7 @@ nav {
 
 .resultat_activites {
   width: 48%;
-  min-width: 260px;
-  max-width: 500px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
   border: 1px solid var(--main-grey-color);
 }
@@ -415,7 +402,6 @@ nav {
 .figure_resultat_activites {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   margin: 0px;
   height: 100%;
   width: 100%;
@@ -576,8 +562,6 @@ footer {
 footer div {
   padding: 20px 0px;
   flex: 1;
-  
-  
 }
 
 footer a {
@@ -591,10 +575,10 @@ footer a {
 
 @media only screen and (max-width: 1300px) {
   .hebergements {
-    width: 45%;
+    width: 47%;
   }
   .populaires {
-    width: 40%;
+    width: 38%;
   }
 
   .resultat_hebergements {
@@ -614,18 +598,60 @@ footer a {
     width: 100%;
     height: 49%;
   }
+
+  .image_resultat_activites_1 {
+    height: 120%;
+    width: 100%;
+    object-position: 50% 0%;
+  }
+
+  .image_resultat_activites_2 {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 50%;
+  }
+
+  .image_resultat_activites_3 {
+    object-position: 50% 90%;
+  }
+
+  .image_resultat_activites_4 {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 10%;
+  }
+  .image_resultat_activites_5 {
+    object-position: 50% 25%;
+  }
+  .image_resultat_activites_6 {
+    object-position: 50% 50%;
+  }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   .hebergements {
     width: 100%;
+    background-color: white;
+  }
+  .resultat_hebergements {
+    border: 1px solid var(--main-grey-color);
   }
   .populaires {
     width: 100%;
   }
+
+  .image_resultat_activites_1 {
+    height: 115%;
+    width: 100%;
+    object-position: 50% 0%;
+  }
+
+  .image_resultat_activites_2 {
+    object-position: 50% 43%;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 560px) {
   .bloc_page {
     width: 100%;
   }
@@ -639,8 +665,6 @@ footer a {
   .menu {
     flex-wrap: wrap;
     justify-content: space-between;
-    min-width: 0;
-    min-height: 0;
   }
 
   .logo_reservia {
@@ -679,6 +703,9 @@ footer a {
     padding: 0px 15px;
     margin-top: 20px;
   }
+  .input_recherche {
+    width: 100%;
+  }
 
   .bouton_recherche {
     display: none;
@@ -712,12 +739,6 @@ footer a {
     padding-right: 15px;
   }
 
-  .resultat_hebergements {
-    width: 100%;
-    height: 220px;
-    border: 1px solid var(--main-grey-color);
-  }
-
   .resultat_populaires {
     width: 100%;
   }
@@ -730,11 +751,11 @@ footer a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between
+    justify-content: space-between;
     align-items: center;
     align-content: space-between;
     position: relative;
-    height: 1500px;
+    height: 1250px;
     width: 100%;
   }
 
@@ -746,41 +767,21 @@ footer a {
   }
   .resultat_activites {
     width: 100%;
-    height: 30%;
+    height: 31%;
   }
 
   .cont_images {
-    height: 80%;
+    height: 74%;
   }
 
   .description_activites {
-    height: 20%;
+    height: 26%;
   }
 
   .image_resultat_activites_1 {
     height: 100%;
     width: 100%;
     object-position: 50% 20%;
-  }
-
-  .image_resultat_activites_2 {
-    object-position: 50% 43%;
-  }
-
-  .image_resultat_activites_3 {
-    object-position: 50% 90%;
-  }
-
-  .image_resultat_activites_4 {
-    height: 100%;
-    width: 100%;
-    object-position: 50% 10%;
-  }
-  .image_resultat_activites_5 {
-    object-position: 50% 25%;
-  }
-  .image_resultat_activites_6 {
-    object-position: 50% 50%;
   }
 
   footer {

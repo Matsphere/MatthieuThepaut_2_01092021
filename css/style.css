@@ -732,6 +732,8 @@ footer a {
     border-radius: 0px;
     padding-left: 15px;
     padding-right: 15px;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .hebergements {
     width: 100%;
@@ -740,6 +742,11 @@ footer a {
     padding-right: 15px;
   }
   .resultat_hebergements {
+    width: 100%;
+  }
+
+  .resultat_populaires {
+    margin: 10px 0px;
     width: 100%;
   }
 

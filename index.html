@@ -16,14 +16,15 @@
     <title>Reservia</title>
   </head>
   <body>
-    <!--Bloc header + Main-->
-    <div class="bloc_page">
       <!--Bloc Header-->
       <header>
         <!--Menu principal Logo et navigation-->
+       <div class="container">
         <div class="menu">
           <div class="logo_reservia">
-            <img src="images/logo/Reservia.svg" alt="Logo" />
+            <a href="#">
+              <img src="images/logo/Reservia.svg" alt="Logo" />
+            </a>
           </div>
           <nav class="navigation">
             <a href="#hebergements" class="menu_nav">Hébergements</a>
@@ -49,9 +50,11 @@
               required=""
               class="input_recherche"
             />
-            <button type="submit" class="bouton_recherche">Rechercher</button>
-            <button type="submit" class="bouton_recherche_loupe">
-              <i class="fas fa-search"></i>
+            <button type="submit" class="bouton_recherche">
+              <span class="bouton_recherche_texte">Rechercher</span
+              ><span class="bouton_recherche_loupe"
+                ><i class="fas fa-search"></i
+              ></span>
             </button>
           </form>
         </div>
@@ -60,7 +63,7 @@
           <h2>Filtres</h2>
           <div class="filtres_liste">
             <a href="#" class="filtres"
-              ><i class="fas fa-money-bill-wave filtres_icone"></i>Economique</a
+              ><i class="fas fa-money-bill-wave filtres_icone"></i>Économique</a
             >
             <a href="#" class="filtres"
               ><i class="fas fa-child filtres_icone"></i>Familial</a
@@ -77,9 +80,11 @@
           <i class="fas fa-info"></i>
           <p>Plus de 500 logements sont disponibles dans cette ville!</p>
         </div>
+       </div>
       </header>
       <!--Début du contenu principal-->
       <main>
+       <div class="container">
         <!--Section hébergements-->
         <div class="section_hebergements">
           <!--Bloc hébergements-->
@@ -491,25 +496,33 @@
             </div>
           </div>
         </section>
+       </div>
       </main>
     </div>
     <footer>
+     <div class="container">
       <div id="a_propos">
         <h2>A propos</h2>
-        <p><a href="#">Fonctionnement du site</a></p>
-        <p><a href="#">Conditions générales de vente</a></p>
-        <p><a href="#">Données et confidentailité</a></p>
+        <ul>
+           <li><a href="#">Fonctionnement du site</a></li>
+           <li><a href="#">Conditions générales de vente</a></li>
+           <li><a href="#">Données et confidentailité</a></li>
+         </ul>
       </div>
       <div id="nos_hebergements">
         <h2>Nos hébergements</h2>
-        <p><a href="#">Charte qualité</a></p>
-        <p><a href="#">Soumettre vos hôtels</a></p>
+        <ul>
+          <li><a href="#">Charte qualité</a></li>
+          <li><a href="#">Soumettre vos hôtels</a></li>
       </div>
       <div id="assistance">
         <h2>Assistance</h2>
-        <p><a href="#">Centre d'aide</a></p>
-        <p><a href="#">Nous contacter</a></p>
+        <ul>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Nous contacter</a></li>
+        </ul>
       </div>
+     </div>
     </footer>
   </body>
 </html>

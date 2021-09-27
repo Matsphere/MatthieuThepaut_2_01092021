@@ -4,9 +4,134 @@
   --main-grey-color: #f2f2f2;
   --main-police: "Raleway", "Arial", "Impact";
 }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /* Definition de la police sur tous les élements*/
 
-* {
+body {
   font-family: var(--main-police);
 }
 
@@ -14,10 +139,18 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+}
 /*Definition de la largeur du bloc page contenant le header et le main */
-.bloc_page {
+.container {
+  max-width: 1340px;
   width: 95%;
-  max-width: 2500px;
   margin: auto;
 }
 
@@ -47,24 +180,24 @@ nav {
 .menu_nav {
   display: flex;
   align-items: center;
-
   color: black;
   padding: 0px 20px;
+  border-top: 2px solid transparent;
 }
 
 .menu_nav:hover {
   color: var(--main-blue-color);
   border-top-color: var(--main-blue-color);
-  border-top-style: solid;
-  border-top-width: 2px;
+}
+
+.recherche_titre h1 {
+  margin: 0px 0px 15px 0px;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 .recherche_titre p {
-  margin: 0px;
-}
-.recherche_titre h1 {
-  margin: 0px 0px 5px 0px;
-  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 .cont_icone {
   background-color: var(--main-grey-color);
@@ -83,20 +216,9 @@ nav {
   color: white;
   border: 0px;
   padding: 15px;
-  font-weight: bold;
   font-size: 1.1em;
 }
 .bouton_recherche_loupe {
-  text-decoration: none;
-  border-radius: 15px;
-  background-color: var(--main-blue-color);
-  color: white;
-  border: 0px;
-  padding: 17px;
-  font-weight: bold;
-  position: absolute;
-  bottom: 18px;
-  right: 0px;
   display: none;
 }
 .fa-search {
@@ -105,7 +227,6 @@ nav {
 
 #form_recherche {
   display: flex;
-
   align-items: center;
   position: relative;
   font-size: 1.1em;
@@ -125,13 +246,16 @@ nav {
   outline: none;
 }
 #filtres {
-  margin: 15px 0px;
+  margin: 20px 0px;
 }
 .filtres_info {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 30px;
+}
+.filtres_info p {
+  margin-top: 7px;
 }
 
 #filtres,
@@ -168,15 +292,14 @@ nav {
   padding-right: 15px;
 }
 #filtres h2 {
-  margin-right: 45px;
-  font-size: 1.3em;
+  margin-right: 40px;
 }
 .filtres {
   position: relative;
   border: 2px solid var(--main-grey-color);
   border-radius: 30px;
   padding: 15px 15px 15px 55px;
-  margin: 7px 15px 15px 0px;
+  margin: 10px 20px 10px 0;
   color: black;
   font-weight: bold;
 }
@@ -202,8 +325,11 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap-reverse;
+  margin-bottom: 40px;
 }
-
+.section_hebergements h2 {
+  margin-bottom: 30px;
+}
 .hebergements {
   width: 62%;
   background-color: var(--main-grey-color);
@@ -225,7 +351,6 @@ nav {
   object-position: center;
 }
 .figure_resultat_hebergements {
-  margin: 0px;
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
@@ -238,32 +363,33 @@ nav {
   padding: 5px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
   background-color: white;
-  margin: 15px 0px;
+  margin-bottom: 30px;
 }
 .description_hebergements {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 50px;
-  padding: 5px;
+  height: 70px;
+  padding: 10px 0px 10px 10px;
 }
 
 .description_texte {
   color: black;
 }
 .description_texte h3 {
-  font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.15em;
+  margin-bottom: 10px;
 }
-.description_hebergements p,
-.description_hebergements h3 {
-  margin: 0px 0px 5px 0px;
+
+.description_texte p {
+  font-size: 1em;
 }
+
 .description_hebergements ul {
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
 }
 
 /*Style Etoiles*/
@@ -301,12 +427,12 @@ nav {
 
 .resultat_populaires {
   height: 140px;
-  width: 90%;
+  width: 100%;
   min-width: 260px;
   border-radius: 15px;
   padding: 5px;
   background-color: white;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -329,12 +455,13 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
+  height: 80%;
   width: 60%;
-  padding-left: 20px;
+  padding: 20px;
 }
 .description_populaires h3 {
-  margin: 20px 0px 5px 0px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
 .description_populaires p {
   margin: 5px 0px 0px 0px;
@@ -350,6 +477,10 @@ nav {
 /*Section activités*/
 #activites {
   padding: 15px 0px;
+  margin-bottom: 40px;
+}
+#activites h2 {
+  margin-bottom: 20px;
 }
 
 .resultats_activites {
@@ -401,11 +532,12 @@ nav {
 }
 .description_activites {
   width: 100%;
-  font-size: 0.8em;
-  color: black;
 }
 .description_activites h3 {
-  margin-left: 15px;
+  margin: 18px 0px 15px 18px;
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
 }
 
 /*Activités 1*/
@@ -535,32 +667,30 @@ nav {
   height: 20%;
 }
 
-#activites h2 {
-  margin: 15px 0px;
-}
-
 /*Style footer*/
 footer {
   width: 100%;
-  margin: auto;
-  max-width: 2777px;
-  display: flex;
   background-color: var(--main-grey-color);
   font-size: 0.8em;
 }
 
+footer .container {
+  display: flex;
+}
+
 footer div {
-  padding: 20px 0px;
-  flex: 1;
+  padding: 30px 0px;
+  flex: 1 1 auto;
 }
 
 footer a {
   color: black;
   font-size: 1.2em;
+  line-height: 2em;
 }
 
-#a_propos {
-  padding-left: 50px;
+footer h2 {
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -652,15 +782,15 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 560px) {
-  .bloc_page {
+@media only screen and (max-width: 768px) {
+  .container {
     width: 100%;
   }
 
   .menu_nav {
-    padding: 0px;
     flex: 1;
     justify-content: center;
+    border-bottom: 2px solid var(--main-grey-color);
   }
 
   .menu {
@@ -669,19 +799,15 @@ footer a {
   }
 
   .logo_reservia {
-    width: fit-content;
     height: 50%;
     width: 50%;
     padding-left: 15px;
-
     order: -1;
   }
 
   nav {
-    order: 1;
     height: 50%;
     width: 100%;
-    border-bottom: 2px solid var(--main-grey-color);
   }
 
   .lien_inscription {
@@ -695,20 +821,26 @@ footer a {
   .menu_nav:hover {
     color: var(--main-blue-color);
     border-bottom-color: var(--main-blue-color);
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-top: none;
+    border-top-color: transparent;
   }
 
   #recherche {
     padding: 0px 15px;
     margin-top: 20px;
   }
-  .input_recherche {
-    width: 100%;
+  form {
+    margin: 30px 0;
   }
-
+  .input_recherche {
+    width: 88%;
+  }
   .bouton_recherche {
+    padding: 14px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0px;
+  }
+  .bouton_recherche_texte {
     display: none;
   }
   .bouton_recherche_loupe {
@@ -741,6 +873,20 @@ footer a {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  #activites {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  footer .container {
+    display: block;
+    margin: 0px 15px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
   .resultat_hebergements {
     width: 100%;
   }
@@ -748,11 +894,6 @@ footer a {
   .resultat_populaires {
     margin: 10px 0px;
     width: 100%;
-  }
-
-  #activites {
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .resultats_activites {
     display: flex;
@@ -789,14 +930,5 @@ footer a {
     height: 100%;
     width: 100%;
     object-position: 50% 20%;
-  }
-
-  footer {
-    display: block;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  #a_propos {
-    padding-left: 0px;
   }
 }
